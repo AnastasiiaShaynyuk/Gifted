@@ -51,4 +51,13 @@ export class SandboxGiftsController {
       console.error(error)
     }
   }
+
+  async deleteGift(id) {
+    try {
+
+    } catch (error) {
+      Pop.error(error)
+      console.error(error)
+    }
+  }
 }
