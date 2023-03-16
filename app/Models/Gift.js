@@ -15,11 +15,24 @@ export class Gift {
   get GiftTemplate() {
     return `
     <div class="col-4 p-2">
-              <div class="card elevation-4">
+              <div class="card elevation-4 card-height">
                 <img src="${this.url}" alt="">
                 <p class="text-center">${this.tag}</p>
+                <button class = "btn btn-outline-danger" onclick="app.sandboxGiftsController.delete('${this.id}')"><i class="mdi mdi-delete"></i></button> 
               </div>
             </div>
     `
+  }
+
+  get ClosedGiftTemplate() {
+    return `
+    <div class="col-4 p-2">
+    <div class="card card-bg card-height elevation-4" onclick="app.sandboxGiftsController.openGift('${this.id}')">
+      <div class="gray-card">
+        <h6 class="mt-2">${this.tag}</h6>
+        <p class="mb-2 text-dark lighten-20">Click to Open</p>
+      </div>
+    </div>
+  </div>`
   }
 }

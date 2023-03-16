@@ -22,6 +22,7 @@ img {
   object-fit: cover;
   object-position: center;
   margin: .75em;
+  height: 25vh;
 }
 
 .card:hover {
@@ -49,5 +50,5 @@ img {
 }
 
 .card-height {
-  min-height: 42vh;
+  height: 35vh;
 }
