@@ -16,24 +16,52 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">Gifted</span>
-      </a>
-    </nav>
-  </header>
+
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <section class="row max-height">
+        <!-- SECTION left sidebar -->
+        <div class="col-4 bg-success text-light p-2">
+          <h1 class="mb-4">Gifted</h1>
+
+          <form class="p-2 mb-1">
+            <label for="tag" class="mb-1">Tag</label>
+            <input type="text" class="form-control mb-2" name="tag" id="tag" required>
+            <label for="url" class="mb-1">URL</label>
+            <input type="url" class="form-control mb-3" name="url" id="url">
+            <div class="text-end">
+              <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+          </form>
+
+          <hr class="text-white">
+
+          <form class="p-2">
+            <label for="search" class="mb-1">Search Gifs</label>
+            <div class="d-flex flex-row">
+              <input type="text" name="search" id="search" class="form-control inline-input">
+              <button class="btn btn-info"><i class="mdi mdi-magnify inline-button"></i></button>
+            </div>
+          </form>
+
         </div>
-      </div>
+        <!-- SECTION gifts display -->
+        <div class="col-8">
+          <div class="row p-3">
+            <!-- card template -->
+            <div class="col-4 p-2">
+              <div class="card elevation-4">
+                <img src="https://place-hold.it/200x200" alt="">
+                <p class="text-center">Sample Text</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </div>
   </main>
+
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
       <p><small>Made with 💖 by CodeWorks</small></p>

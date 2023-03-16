@@ -1,1 +1,25 @@
 /* BASIC STYLES HERE */
+.max-height {
+  height: 100vh;
+}
+
+.inline-input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.inline-button {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  margin: .75em;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  transition: all ease .2s
+}
