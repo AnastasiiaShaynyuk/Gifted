@@ -8,9 +8,14 @@
   border-bottom-right-radius: 0px;
 }
 
-.inline-button {
-  border-top-left-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
+.btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px
+}
+
+.submit-btn {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem
 }
 
 img {
@@ -22,4 +27,27 @@ img {
 .card:hover {
   transform: scale(1.025);
   transition: all ease .2s
+}
+
+.card-bg {
+  background-image: url('https://s3-alpha-sig.figma.com/img/48b4/db47/70a89962f08e627f497482c22625ec37?Expires=1679875200&Signature=YwNrvNfmCEmeYf9iLH2Yc0lyIw~R~IexAftE9AO3HzNbe1vZiPeRNL-i7HOiydceCu2APC1kwjwyzZtLPU5AUB0TaHf6iUcmENu0RznE9wJ~qb44Kcqb75vl3gJI-6dyJigKv7uoPj9TFNTm19ZpSIzLdRNTdhz3DXgjZvfln95gLYxPMjk0t6RjimVjp8TJAfwlj62fh8~NawWdE6uSrW4HPUOwZyvSkOqWgj-GTEyOkFkwnWblif~j6uGnqfC-S7XrfhXCrr06NZ6DrJH4ZiIplbpfHavH8T1cfFqgqlAx5F9s5ZGavZYvY5P9SZ~PsvZfH9oTRXW6C5CtmU2Wgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gray-card {
+  background-color: #C4C4C4;
+  width: 80%;
+  height: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-height {
+  min-height: 42vh;
 }
