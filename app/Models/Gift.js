@@ -18,7 +18,7 @@ export class Gift {
                 <img src="${this.url}" alt="">
                 <p class="text-center p-0">${this.tag}</p>
                 <div class ="text-end me-1 mb-1">
-                <button class = "btn btn-outline-danger" onclick="app.sandboxGiftsController.delete('${this.id}')"><i class="mdi mdi-delete"></i></button> 
+                <button class = "btn btn-outline-danger" onclick="app.sandboxGiftsController.deleteGift('${this.id}')"><i class="mdi mdi-delete"></i></button> 
                 </div>
               </div>
             </div>
