@@ -17,8 +17,10 @@ export class Gift {
     <div class="col-4 p-2">
               <div class="card elevation-4 card-height">
                 <img src="${this.url}" alt="">
-                <p class="text-center">${this.tag}</p>
+                <p class="text-center p-0">${this.tag}</p>
+                <div class ="text-end me-1 mb-1">
                 <button class = "btn btn-outline-danger" onclick="app.sandboxGiftsController.delete('${this.id}')"><i class="mdi mdi-delete"></i></button> 
+                </div>
               </div>
             </div>
     `
