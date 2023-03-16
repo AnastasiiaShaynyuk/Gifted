@@ -37,6 +37,11 @@ class SandboxGiftsService {
     console.log(appState.gifts, res.data)
 
   }
+  async deleteGift(giftId) {
+    const res =await sandboxGiftsApi.delete(`${giftId}`)
+    console.log('deleting', res.data)
+    appState.gifts = appState.gifts.filter(g => g.id != giftId)
 }
-
+  
+}
 export const sandboxGiftsService = new SandboxGiftsService()

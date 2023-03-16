@@ -52,12 +52,13 @@ export class SandboxGiftsController {
     }
   }
 
-  async deleteGift(id) {
+  async deleteGift(giftId) {
     try {
-
+      await sandboxGiftsService.deleteGift(giftId)
+      Pop.toast('Deleted', 'success')
     } catch (error) {
       Pop.error(error)
       console.error(error)
     }
-  }
+}
 }
