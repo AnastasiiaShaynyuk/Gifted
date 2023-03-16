@@ -7,7 +7,7 @@ class App {
 
   giphyController = new GiphyController()
 
-  sandboxGiftsCOntroller = new SandboxGiftsController()
+  sandboxGiftsController = new SandboxGiftsController()
 }
 
 window["app"] = new App();
