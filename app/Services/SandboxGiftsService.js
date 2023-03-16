@@ -34,7 +34,7 @@ class SandboxGiftsService {
     console.log(res.data)
     appState.gifts.unshift(new Gift(res.data))
     appState.emit('gifts')
-    console.log(appState.gifts)
+    console.log(appState.gifts, res.data)
 
   }
 }
