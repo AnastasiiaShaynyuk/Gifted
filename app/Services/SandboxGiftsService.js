@@ -20,8 +20,11 @@ class SandboxGiftsService {
     try {
       let openedGift = appState.gifts.find(g => g.id == giftId)
       openedGift.opened = true
-      appState.emit('gifts')
       let res = await sandboxGiftsApi.put(`${giftId}`, openedGift)
+      let giftIndex = appState.gifts.findIndex(g => g.id == giftId)
+      // NOTE This is SUPER important! (Otherwise your page will draw old information)
+      appState.gifts.splice(giftIndex, 1, new Gift(res.data))
+      appState.emit('gifts')
     } catch (error) {
       Pop.error(error)
       console.error(error)
@@ -29,9 +32,9 @@ class SandboxGiftsService {
   }
 
   async createGift(formData) {
-    // console.log(formData);
+    console.log('FORM DATA', formData);
     const res = await sandboxGiftsApi.post('', formData)
-    console.log(res.data)
+    console.log('RES DATA', res.data)
     appState.gifts.unshift(new Gift(res.data))
     appState.emit('gifts')
     console.log(appState.gifts)

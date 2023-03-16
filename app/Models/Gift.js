@@ -2,14 +2,13 @@
 
 
 export class Gift {
-  forEach(arg0) {
-    throw new Error("Method not implemented.")
-  }
   constructor(data) {
     this.id = data.id
     this.tag = data.tag || 'Here is your Gift!'
-    this.url = data.url || 'http://placekitten.com/200/300'
-    this.opened = data.opened
+    this.url = data.url
+    // this.url = data.url || 'http://placekitten.com/200/300'
+
+    this.opened = data.opened || false
   }
 
   get GiftTemplate() {
